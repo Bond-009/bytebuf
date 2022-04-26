@@ -23,7 +23,7 @@ macro_rules! check_valid {
 /// ```
 /// use std::io::{Read, Write};
 ///
-/// use bytebuf::RingBuf;
+/// use bytebufrs::RingBuf;
 ///
 /// let mut rb = RingBuf::with_capacity(5);
 ///
@@ -51,7 +51,7 @@ impl RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb = RingBuf::with_capacity(10);
     ///
@@ -68,7 +68,7 @@ impl RingBuf {
     //// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let rb = RingBuf::with_capacity(10);
     /// assert_eq!(rb.capacity(), 10);
@@ -84,7 +84,7 @@ impl RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb: RingBuf = vec![0, 1, 2, 3, 4].into();
     ///
@@ -106,7 +106,7 @@ impl RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let rb: RingBuf = vec![1, 2, 3].into();
     /// assert_eq!(rb.len(), 3);
@@ -129,7 +129,7 @@ impl RingBuf {
     /// ```
     /// use std::io::Write;
     ///
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb = RingBuf::with_capacity(10);
     /// assert!(rb.is_empty());
@@ -149,7 +149,7 @@ impl RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb: RingBuf = vec![0, 1, 2].into();
     /// assert_eq!(rb.len(), 3);
@@ -160,7 +160,7 @@ impl RingBuf {
     /// Trying to set the read position past the write position will fail:
     ///
     /// ```should_panic
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb = RingBuf::with_capacity(10);
     /// rb.advance_read_pos(1).unwrap(); // Will panic!
@@ -186,7 +186,7 @@ impl RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let mut rb: RingBuf = vec![0, 1, 2].into();
     /// assert_eq!(rb.len(), 3);
@@ -220,7 +220,7 @@ impl From<Box<[u8]>> for RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let rb: RingBuf = vec![0u8; 5].into_boxed_slice().into();
     /// assert_eq!(rb.capacity(), 4);
@@ -242,7 +242,7 @@ impl From<Vec<u8>> for RingBuf {
     /// # Examples
     ///
     /// ```
-    /// use bytebuf::RingBuf;
+    /// use bytebufrs::RingBuf;
     ///
     /// let rb: RingBuf = vec![0, 1, 2, 3, 4].into();
     /// assert_eq!(rb.capacity(), 5);

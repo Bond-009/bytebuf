@@ -1,5 +1,5 @@
 [package]
-name = "bytebuf"
+name = "bytebufrs"
 version = "0.1.0"
 edition = "2018"
 authors = ["Bond_009 <bond.009@outlook.com>"]
@@ -7,6 +7,6 @@ license = "MPL-2.0"
 description = "A ring buffer for bytes implementing io::Read and io::Write"
 keywords = ["ring", "circular", "cyclic", "buffer", "bytes"]
 categories = ["data-structures"]
-repository = "https://github.com/Bond-009/bytebuf.git"
+repository = "https://github.com/Bond-009/bytebufrs.git"
 
 [dependencies]
